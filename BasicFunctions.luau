@@ -40,9 +40,8 @@ local function CharacterAdded(m)
 	Character = m
 	Humanoid = WaitForChild(Character, 'Humanoid')
 	HumanoidRootPart = Humanoid.RootPart
-	if (RespawnedFunction) then
-		RespawnedFunction(Character, Humanoid, HumanoidRootPart)
-	end
+	repeat task.wait() until RespawnedFunction
+	RespawnedFunction(Character, Humanoid, HumanoidRootPart)
 end
 LocalPlayer.CharacterAdded:Connect(CharacterAdded)
 if (LocalPlayer.Character) then
