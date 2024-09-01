@@ -28,6 +28,10 @@ function Functions.ValidCharacter(m)
 	return m and m:FindFirstChild('Humanoid') and m.Humanoid.Health > 0 and m.PrimaryPart
 end
 
+function Functions.ValidCharacterH(m)
+	return m and m:FindFirstChild('Humanoid') and m.PrimaryPart
+end
+
 function Functions.WithinDistance(p,d)
 	return Character and LocalPlayer:DistanceFromCharacter(p) <= d
 end
