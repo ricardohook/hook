@@ -35,6 +35,10 @@ end
 function Functions.SetRespawn(f)
 	RespawnedFunction = f
 end
+-- Basic
+function Functions.ReplaceIfEmpty(t, i, v)
+	if (not t[i]) then t[i] = v end
+end
 -- Respawning
 local function CharacterAdded(m)
 	Character = m
